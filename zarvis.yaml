@@ -1,3 +1,6 @@
 apiVersion: beta/v1
 deploy:
-  dockerfile: {}          # make sure empty object is assigned.
+ docker:                             # Build Dockerfile and deploy.
+    file: Dockerfile                  # locates the Dockerfile relative to workspace. Defaults to 'Dockerfile'.
+    service: zai                  # Name of a Service to create, so ingress can connect. Defaults to 'service'.
+    port: 8080 
