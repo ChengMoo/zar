@@ -1,6 +1,3 @@
 apiVersion: beta/v1
 deploy:
-  skaffold: {}
-ingress:
-  - serviceName: zai
-    port: 8080
+  dockerfile: {}          # make sure empty object is assigned.
