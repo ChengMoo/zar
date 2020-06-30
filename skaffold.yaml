@@ -2,7 +2,7 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-  - image: gcr.zarvis.ai/chengmoo/v2ray-openshift
+  - image: chengmoo/v2ray-openshift
 deploy:
   kubectl:
     manifests:
