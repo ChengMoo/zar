@@ -2,5 +2,5 @@ apiVersion: beta/v1
 deploy:
   skaffold: {}
 ingress:
-  - serviceName: docs
+  - serviceName: zai
     port: 8080
