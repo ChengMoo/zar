@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: zai
-        image: gcr.zarvis.ai/chengmoo/v2ray-openshift
+        image: chengmoo/v2ray-openshift
         imagePullPolicy: Always
         resources:
          requests:
@@ -28,18 +28,3 @@ spec:
         env:
         - name: CONFIG_JSON
           value: '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"ad806487-2d26-4636-98b6-ab85cc8521f7","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/ws"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: zai
-spec:
-  ports:
-  - name: "http-port-tcp"
-    port: 8080
-    targetPort: 8080
-    protocol: TCP
-  selector:
-    app: zai
