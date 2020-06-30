@@ -1,3 +1,3 @@
 apiVersion: beta/v1
 deploy:
-  dockerfile: {}          # make sure empty object is assigned.
+  dockerfile: {zai}          # make sure empty object is assigned.
