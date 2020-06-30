@@ -4,3 +4,6 @@ deploy:
     file: Dockerfile                  # locates the Dockerfile relative to workspace. Defaults to 'Dockerfile'.
     service: zai                  # Name of a Service to create, so ingress can connect. Defaults to 'service'.
     port: 8080 
+ingress:                              # Ingress configures https endpoints.
+- service: zai                           # Name of a Service to connect. Defaults to 'service'
+  port:                               # Port number of the service. Defaults to '8080'
