@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: zai
-        image: chengmoo/v2ray-openshift
+        image: gcr1.zarvis.ai/chengmoo/chengmoo_v2ray-openshift
         imagePullPolicy: IfNotPresent
         resources:
          requests:
